@@ -14,12 +14,31 @@
 		href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
 		rel="stylesheet">
 	<meta charset="UTF-8">
-	<script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
-	<script src="./config/scriptsminify.js" defer></script>
-	<script src="./config/maugalleryminify.js" defer></script>
+	<script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
+	<script src="./config/maugallery.js" defer></script>
+	<script src="./config/scripts.js" defer></script>
 
+	<!-- Open Graph -->
+	<meta property="og:title" content="Nina Carducci | Photographe à Bordeaux">
+	<meta property="og:description"
+		content="Photographe professionnelle à Bordeaux spécialisée en mariage, portrait et événements.">
+	<meta property="og:type" content="website">
+	<meta property="og:url"
+		content="https://nolantrcht.github.io/Projet-n-4-Debuggez-et-optimisez-un-site-de-photographe/">
+	<meta property="og:image"
+		content="https://nolantrcht.github.io/Projet-n-4-Debuggez-et-optimisez-un-site-de-photographe/assets/images/ninafb.png">
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:site_name" content="Nina Carducci">
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Nina Carducci | Photographe à Bordeaux">
+	<meta name="twitter:description"
+		content="Photographe professionnelle à Bordeaux spécialisée en mariage, portrait et événements.">
+	<meta name="twitter:image"
+		content="https://nolantrcht.github.io/Projet-n-4-Debuggez-et-optimisez-un-site-de-photographe/assets/images/ninafb.png">
 </head>
 
 <body>
@@ -75,15 +94,16 @@
 		</section>
 	</header>
 	<main>
-		<section id="about">
+		<section id="about" itemscope itemtype="https://schema.org/LocalBusiness">
 			<div class="picture left">
-				<img src="./assets/images/nina.jpg" alt="portrait de Nina Carducci photographe">
+				<img itemprop="image" src="./assets/images/nina.jpg" alt="portrait de Nina Carducci photographe">
 			</div>
 			<div id="about-me">
 				<h2 class="about-me__title">A propos de moi</h2>
-				<h6 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais
+				<p class="about-me__introduction">Je suis <span itemprop="name">Nina Carducci</span> et devenir
+					photographe était pour moi une évidence. Comme si j’y étais
 					prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre
-					immortels, voilà ce qui me fait vibrer.</h6>
+					immortels, voilà ce qui me fait vibrer.</p>
 				<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie :
 					le
 					figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos
@@ -94,6 +114,14 @@
 					technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de
 					la
 					tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
+			</div>
+			<div>
+				<p>je pratique mes shooting photos aussi bien à mon studio au <span itemprop="address"
+						itemprop="streetAddress">68 avenue
+						Alsace-Lorraine</span>, <span itemprop="postalAddress">33200</span> <span
+						itemprop="adressRegion">Bordeaux,</span> que dans le reste de la
+					France. Pour toute demande vous pouvez me contacter à ce numéro : <span itemprop="telephone">05 56
+						67 78 89</span>. Je me ferais une joie de vous accompagner dans votre projet</p>
 			</div>
 		</section>
 		<section id="gallery">
@@ -187,8 +215,9 @@
 		<div id="contact">
 			<div class="container">
 				<div class="form-container">
-					<h2>Une question ? Une demande de devis ?</h2>
-					<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
+					<h2>Un devis pour un Shooting photos ?</h2>
+					<p> N’hésitez pas à m’écrire ou à m'appeller au <span itemprop="telephone
+						">05 56 67 78 89</span>. Je vous répondrais en moins de 24 heures</p>
 					<form action="" method="post">
 						<label for="nom">Nom</label>
 						<input type="text" name="nom" id="nom">
