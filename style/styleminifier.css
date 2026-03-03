@@ -1,7 +1,6 @@
 #about-me p,
-.about-me__title,
-.title {
-  text-align: center;
+.nav ul {
+  font-size: 14px;
 }
 .nav a,
 .nav-pills .nav-link {
@@ -21,6 +20,7 @@
 .service,
 .top-header {
   background-color: #fff;
+  display: flex;
 }
 #about,
 #contact {
@@ -34,6 +34,17 @@
   position: absolute;
   z-index: -1;
 }
+#about,
+#about-me,
+#contact .container,
+.mg-next,
+.mg-prev,
+.nav ul,
+.service,
+.top-header,
+form {
+  display: flex;
+}
 body {
   max-width: 1920px;
   margin: auto;
@@ -46,7 +57,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  display: flex;
   justify-content: space-between;
   padding-inline: 100px;
   padding-block: 30px;
@@ -58,18 +68,11 @@ body {
 .item-column {
   position: relative;
 }
-#about,
-.service {
-  flex-direction: column;
-  display: flex;
-}
 .top-header .name {
   font-size: 26px;
 }
 .nav ul {
-  display: flex;
   list-style-type: none;
-  font-size: 14px;
   margin-bottom: 0;
 }
 .nav li {
@@ -82,6 +85,7 @@ body {
   width: 20px;
 }
 #about {
+  flex-direction: column;
   align-items: center;
   background-color: #ffebc9;
 }
@@ -99,11 +103,13 @@ body {
 .picture img {
   width: 100%;
 }
-#about-me,
-.form-container {
+#about-me {
   flex: 2;
+  flex-direction: column;
+  align-items: center;
 }
 .about-me__title {
+  text-align: center;
   margin-top: 1em;
   margin-bottom: 60px;
   font-size: 30px;
@@ -113,11 +119,17 @@ body {
   font-weight: 800;
   width: 60%;
 }
-#about-me p {
+#about-me p,
+.about-me_seo {
   width: 80%;
-  font-size: 14px;
+  text-align: center;
+}
+.about-me_seo {
+  font-weight: 400;
+  font-size: 0.9em;
 }
 .title {
+  text-align: center;
   padding-block: 2em;
 }
 .gallery .nav {
@@ -157,7 +169,6 @@ body {
   border-radius: 00%;
   justify-content: center;
   align-items: center;
-  display: flex;
   font-size: 24px;
 }
 form input,
@@ -204,6 +215,7 @@ form textarea {
   width: 30%;
   height: 337px;
   padding: 1em;
+  flex-direction: column;
   justify-content: space-between;
   z-index: 1;
 }
@@ -215,17 +227,16 @@ form textarea {
   margin: auto;
   background-color: #d8d3a8;
 }
-#contact .container {
-  display: flex;
-}
 .picture.right::before {
   background-color: #beb45a;
   width: 374px;
   bottom: 0;
   right: 0;
 }
+.form-container {
+  flex: 2;
+}
 form {
-  display: flex;
   flex-direction: column;
   width: 70%;
   align-items: flex-start;
